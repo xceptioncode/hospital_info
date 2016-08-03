@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>www.DocLab.com  </title>
+   <link href="../css/startbootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
+   
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,700italic,400,700" rel="stylesheet" type="text/css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    
+    
+    
+    <!--[if IE]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">DocLab</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Our Collection of Templates &amp; Themes">Services <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="hospital.html"><i class="fa fa-hospital-o fa-fw"></i> Hospital Record Manager</a>
+                        </li>
+                        <li>
+                            <a href="doctor.html"><i class="fa fa-stethoscope fa-fw"></i> Doctor's Record Manager</a>
+                        </li>
+                        <li>
+                            <a href="laboratory.html"><i class="fa fa-medkit fa-fw"></i> Laboratory Record Manager</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="" title="Sign up ">Sign up</a>
+                </li>
+                
+                <li>
+                    <a href="/help" title="Help with DocLab interface">Help</a>
+                </li>
+                <li>
+                    <a href="/contact" title="Contact the DocLab Team">Contact</a>
+                </li>
+                <li class="pull-right">
+                
+                </li>
+                
+                
+                
+            </ul>
+            
+            
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>    
+  <header class="sb-page-header">
+    <div class="container">
+        <h1>Laboratory's Information</h1>
+        <p>Enter details of laboratory.</p>
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=startbootstrapcom" id="_carbonads_js"></script>
+
+    </div>
+</header>
+    <div class="container">
+     <div class='col-md-8'> 
+         <h2 class='text-danger'><b> Laboratory's Details</b></h2>
+       <form role='form' method="POST" action="../php/laboratory.php">
+          <div class='form-group'>
+            <label for='name'> Laboratory's Name:</label> 
+          
+              <input type='text' class='form-control' id='name' name="name" placeholder="Enter Laboratory's Name" required>
+           
+          </div>
+
+          <div class='form-group'>
+            <label for='mobile'> Mobile:</label> 
+          
+              <input type='text' maxlength="10" class='form-control' id='mobile' name="mobile" placeholder="Enter Contact no. of Laboratory" required pattern="[0-9]{10}">
+              
+          </div>
+
+          <div class='form-group'>
+            <label for='name'> Email:</label> 
+          
+              <input type='email' class='form-control' id='email' name="email" placeholder="Enter Laboratory's Email" required>
+           
+          </div>
+
+           <div class='form-group'>
+            <label for='address'> Address:</label> 
+           
+              <textarea class="form-control" rows="3" id='address' name="address" placeholder="Enter Address" required></textarea>
+             
+          </div>   
+          <div class='form-group'>
+            <label for='city'> City:</label> 
+           
+              <input type='text' class='form-control' id='city' name="city" placeholder="Enter city" required>
+             
+          </div>
+          <div class='form-group'>
+            <label for='state'> State:</label> 
+           
+              <input type='text' class='form-control' id='state' name="state" placeholder="Enter State" required>
+           </div>
+        
+           <button type='submit' class='btn btn-default'> Submit </button> 
+      
+              
+       </form>
+    </div>
+    
+    
+   </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="../js/dscript.js"> </script>
+</body>
+</html>

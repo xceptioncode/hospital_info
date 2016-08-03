@@ -1,0 +1,19 @@
+.center {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.btn {
+	margin-left: 25.4px;
+}
+h3{
+	margin-left: 21%;
+	color:blue;
+	font-family: Georgia;
+	font-size: 30px;
+}

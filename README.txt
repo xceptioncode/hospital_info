@@ -1,0 +1,1 @@
+Folder "hospital_info"-it is a db of mysql, so, you should put it \xampp\mysql\data
