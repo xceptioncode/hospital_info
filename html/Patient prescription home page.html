@@ -6,15 +6,24 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>www.DocLab.com  </title>
-   <link href="css/startbootstrap.min.css" rel="stylesheet" type="text/css">
+   <link href="../css/startbootstrap.min.css" rel="stylesheet" type="text/css">
     <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
-   
+  
     <!-- Fonts -->
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,700italic,400,700" rel="stylesheet" type="text/css">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+    <style>
+        .jumbotron{
+   position: relative;
+    background: #2a3 url("../images/info.jpg") center left;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
     
+        }
+    </style>
     
     
     <!--[if IE]>
@@ -80,64 +89,91 @@
     </div>
     <!-- /.container -->
 </nav>    
-  <header class="sb-page-header">
-    <div class="container">
-        <h1>Patient's Information</h1>
-        <p>Enter details of patient.</p>
+ 
+   
+     <div class='jumbotron'>
+            <div class='container'>
+        <h1 style='color: crimson;'>Patient's Prescription</h1>
+        <p>Access prescription, test reports.</p>
+       
         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=startbootstrapcom" id="_carbonads_js"></script>
-
+        </div>
     </div>
-</header>
+    
+ 
     <div class="container">
-     <div class='col-md-8'> 
-         <h2 class='text-danger'><b> Patient's Details</b></h2>
-       <form role='form'>
-          <div class='form-group'>
-            <label for='name'> Patient's Name:</label> 
+     <div class='row'>   
+     <div class='col-md-3'>
+          <ul class='list-group'>
+           <a href='#' class='list-group-item'> History<i class="pull-right fa fa-history fa-fw"></i></a>
+           <a href='#' class='list-group-item'> Reports<i class="pull-right fa fa-file fa-fw"></i></a>
+           <a href='#' class='list-group-item'> Profile<i class="pull-right fa fa-user fa-fw"></i></a>
+           <a href='#' class='list-group-item'> New Prescription<i class="pull-right fa fa-pencil-square-o fa-fw"></i></a>
+          </ul>
+         
+     </div>
+      <div class='col-md-7 well'>
+          <h3> Mr. Joe Moode</h3>
+           <p> 28 years old</p>
+          <hr/>
+          <table class="table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Prescription</th>
+        <th>Lab-Test</th>
+        <th>Report</th>
+        <th>Download</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>9/08/2016</td>
+        <td><a href='#'>Prescription</a></td>
+        <td><span class='label label-default'>Antibody titre</span>&nbsp;&nbsp;<span class='label label-default'>Ascitic fluid</span></td>
+        <td><p class='text-danger'> Not Available</p></td>
+        <td><i class="pull-right fa fa-download fa-fw"></i></td>
+      </tr>
+      <tr>
+        <td>1/08/2016</td>
+        <td><a href='#'>Prescription</a></td>
+        <td>--------</td>
+        <td><p class='text-danger'> ---------</p></td>
+        <td></td>
+      </tr>
+        <tr>
+        <td>15/04/2016</td>
+        <td><a href='#'>Prescription</a></td>
+        <td><span class='label label-default'>Antibody titre</span>&nbsp;&nbsp;<span class='label label-default'>Ascitic fluid</span></td>
+        <td><p class='text-danger'> Not Available</p></td>
+        <td><i class="pull-right fa fa-download fa-fw"></i></td>
+      </tr>
+        <tr>
+        <td>23/02/2016</td>
+        <td><a href='#'>Prescription</a></td>
+        <td><span class='label label-default'>Anti-Hepatitis Bs antibody </span>&nbsp;&nbsp;<span class='label label-default'>Anti C1q </span></td>
+        <td><a href='#'> Available</a></td>
+        <td><i class="pull-right fa fa-download fa-fw"></i></td>
+      </tr>
+        <tr>
+        <td>9/08/2016</td>
+        <td><a href='#'>Prescription</a></td>
+        <td><span class='label label-default'>Antibody titre</span>&nbsp;&nbsp;<span class='label label-default'>Ascitic fluid</span></td>
+        <td><p class='text-danger'> Available</p></td>
+        <td><i class="pull-right fa fa-download fa-fw"></i></td>
+      </tr>
+        <tr>
+        <td>9/08/2016</td>
+        <td><a href='#'>Prescription</a></td>
+        <td><span class='label label-default'>Antibody titre</span>&nbsp;&nbsp;<span class='label label-default'>Ascitic fluid</span></td>
+        <td><p class='text-danger'> Available</p></td>
+        <td><i class="pull-right fa fa-download fa-fw"></i></td>
+      </tr>
           
-              <input type='text' class='form-control' id='name' placeholder="Enter Patient's Name">
-           
-          </div>
-          <div class='form-group'>
-            <label for='fname'> Father/Spouse's Name:</label> 
-          
-              <input type='text' class='form-control' id='fname' placeholder="Enter Father/Spouse's Name">
-             
-          </div>
-          <div class='form-group'>
-            <label for='age'> Age:</label> 
-          
-              <input type='text' class='form-control' id='age' placeholder="Enter Age of Patient">
-              
-          </div>
-            <div class='form-group'>
-            <label for='mobile'> Mobile:</label> 
-          
-              <input type='text' class='form-control' id='mobile' placeholder="Enter Contact no. of Patient">
-              
-          </div>
-           <div class='form-group'>
-            <label for='address'> Address:</label> 
-           
-              <textarea class="form-control" rows="5" id="address" placeholder="Enter Address"></textarea>
-             
-          </div>   
-          <div class='form-group'>
-            <label for='city'> City:</label> 
-           
-              <input type='text' class='form-control' id='city' placeholder="Enter city">
-             
-          </div>
-          <div class='form-group'>
-            <label for='state'> State:</label> 
-           
-              <input type='text' class='form-control' id='state' placeholder="Enter State">
-           </div>
-        
-           <button type='submit' class='btn btn-default'> Submit </button> 
-      
-              
-       </form>
+    </tbody>
+  </table>
+      </div>
+     </div>
     </div>
     
     

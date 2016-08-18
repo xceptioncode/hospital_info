@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>www.DocLab.com  </title>
-   <link href="css/startbootstrap.min.css" rel="stylesheet" type="text/css">
+   <link href="../css/startbootstrap.min.css" rel="stylesheet" type="text/css">
     <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
    
     <!-- Fonts -->
@@ -82,62 +82,71 @@
 </nav>    
   <header class="sb-page-header">
     <div class="container">
-        <h1>Patient's Information</h1>
-        <p>Enter details of patient.</p>
+        <h1>User's Information</h1>
+        <p>Update details of users.</p>
         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=startbootstrapcom" id="_carbonads_js"></script>
 
     </div>
 </header>
     <div class="container">
      <div class='col-md-8'> 
-         <h2 class='text-danger'><b> Patient's Details</b></h2>
-       <form role='form'>
+         <h2 class='text-danger'><b> User's Details</b></h2>
+         <?php
+require_once "connection.php"; 
+$id = $_REQUEST['user'];
+$select_sql = "SELECT * FROM patient WHERE id= $id";
+$result = mysqli_query($mysqli, $select_sql);
+$row = mysqli_fetch_array($result);
+       printf("<form action='updateDFP.php' method='post' name='forma'>
+        <input type='hidden' name='id'  value='%s'><br/>
           <div class='form-group'>
-            <label for='name'> Patient's Name:</label> 
+            <label for='name'> User's Name:</label> 
           
-              <input type='text' class='form-control' id='name' placeholder="Enter Patient's Name">
+              <input type='text' class='form-control' name='name' id='name' value='%s' >
            
           </div>
           <div class='form-group'>
-            <label for='fname'> Father/Spouse's Name:</label> 
+            <label for='surname'> User's Surname:</label> 
           
-              <input type='text' class='form-control' id='fname' placeholder="Enter Father/Spouse's Name">
+              <input type='text' class='form-control' id='surname' name='surname' value='%s'>
              
           </div>
           <div class='form-group'>
             <label for='age'> Age:</label> 
           
-              <input type='text' class='form-control' id='age' placeholder="Enter Age of Patient">
+              <input type='text' class='form-control' name='age' id='age' value='%s' >
               
           </div>
             <div class='form-group'>
-            <label for='mobile'> Mobile:</label> 
+            <label for='mobile'> Contact:</label> 
           
-              <input type='text' class='form-control' id='mobile' placeholder="Enter Contact no. of Patient">
+              <input type='text' class='form-control' name='contact' id='contact' value='%s' >
               
           </div>
            <div class='form-group'>
             <label for='address'> Address:</label> 
            
-              <textarea class="form-control" rows="5" id="address" placeholder="Enter Address"></textarea>
+              <input type='text' class='form-control' name='address' id='address' value='%s' >
              
-          </div>   
+          </div>     
           <div class='form-group'>
-            <label for='city'> City:</label> 
-           
-              <input type='text' class='form-control' id='city' placeholder="Enter city">
-             
+            <label for='age'> City:</label> 
+          
+              <input type='text' class='form-control' name='city' id='city' value='%s' >
+              
           </div>
           <div class='form-group'>
-            <label for='state'> State:</label> 
-           
-              <input type='text' class='form-control' id='state' placeholder="Enter State">
-           </div>
-        
-           <button type='submit' class='btn btn-default'> Submit </button> 
-      
+            <label for='age'> State:</label> 
+          
+              <input type='text' class='form-control' name='state' id='state' value='%s' >
               
-       </form>
+          </div>
+          <div class='form-group'>
+       
+              <button type='submit' class='btn btn-success'> Update </button>  
+           </div>   
+</form>",$row['id'], $row['name'], $row['father/spouse name'], $row['age'], $row['contact'], $row['address'], $row['city'], $row['state']);
+?>     
     </div>
     
     
